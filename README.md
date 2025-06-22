@@ -25,7 +25,7 @@ Install Dependencies – Make sure you have Node.js, MySQL, and MongoDB installe
 Clone & Configure –
 
 bash
-git clone https://github.com/yourusername/coffeemaster.git  
+git clone https://github.com/arb69zs/coffeemaster.git  
 cd coffeemaster  
 Set Up the Server –
 
