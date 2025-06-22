@@ -1,134 +1,58 @@
-# CoffeeMaster - Coffee Shop Management System
+CoffeeMaster - Coffee Shop Management System
+CoffeeMaster is a user-friendly system that helps coffee shops manage everything from orders to inventory. It's designed to make daily operations smoother for staff, whether they're taking orders at the counter or managing stock in the back.
 
-CoffeeMaster is a full-stack coffee shop management system designed to streamline daily operations. It features a modern web interface built with React.js and a robust backend powered by Express.js.
+What It Does
+Easy Order Taking – A simple, touch-friendly POS system for quick order entry and receipt printing.
 
-## Overview
+Smart Inventory Tracking – Automatically updates stock levels as orders come in and warns when supplies run low.
 
-The application serves key staff roles—Cashier, Manager, and Admin—with role-based access to its features. The Point of Sale (POS) system functions exclusively as an order logger and receipt generator, with all financial transactions (cash or card payments) handled by a separate, external terminal.
+Menu & Recipe Control – Easily update drinks, ingredients, and prices.
 
-A defining feature of this project is its hybrid database architecture, strategically using MySQL for structured, transactional data and MongoDB for flexible, document-based data.
+Staff Management – Different access levels for cashiers, managers, and admins.
 
-## Features
+Reports & Insights – See sales trends, track inventory use, and make better business decisions.
 
-- **Point of Sale (POS) System**:
-  - Visual, touch-friendly grid of menu items
-  - Order cart with totals calculation
-  - Payment method selection (cash/card)
-  - Digital receipt generation
+How It Works
+Frontend – Built with React.js for a fast, modern interface.
 
-- **Inventory Management**:
-  - Track stock levels for ingredients
-  - Recipe-based automatic stock deduction
-  - Low-stock alerts
-  - Stock replenishment interface
+Backend – Runs on Node.js with Express for reliability.
 
-- **Menu & Recipe Management**:
-  - Add, edit, or remove menu items
-  - Define recipes linking to inventory components
-  - Set prices and categories
+Databases – Uses MySQL for secure transaction data (like sales) and MongoDB for flexible stuff (like recipes and logs).
 
-- **Employee Management**:
-  - Create and manage employee accounts
-  - Role-based access control (Cashier, Manager, Admin)
+Setup Guide
+Install Dependencies – Make sure you have Node.js, MySQL, and MongoDB installed.
 
-- **Reporting & Analytics**:
-  - Real-time dashboard
-  - Historical sales reports
-  - Inventory consumption analysis
+Clone & Configure –
 
-## Technology Stack
+bash
+git clone https://github.com/yourusername/coffeemaster.git  
+cd coffeemaster  
+Set Up the Server –
 
-- **Frontend**:
-  - React.js with TypeScript
-  - React Router for navigation
-  - Context API for state management
-  - Axios for API requests
-  - CSS for styling
+bash
+cd server  
+npm install  
+cp .env.example .env  # Fill in your database details  
+npm run build  
+npm start  
+Launch the Frontend –
 
-- **Backend**:
-  - Node.js with Express
-  - TypeScript for type safety
-  - JWT for authentication
-  - MySQL for transactional data
-  - MongoDB for flexible data (recipes, logs)
+bash
+cd ../client  
+npm install  
+npm start  
+Log In – Open http://localhost:3000 and use:
 
-## Project Structure
+Admin: admin / admin123
 
-```
-CoffeeMaster/
-├── client/                 # React frontend
-│   ├── public/             # Static files
-│   └── src/                # Source code
-│       ├── components/     # Reusable components
-│       ├── contexts/       # React contexts
-│       ├── pages/          # Page components
-│       ├── services/       # API services
-│       ├── styles/         # CSS styles
-│       └── types/          # TypeScript types
-└── server/                 # Express backend
-    ├── src/                # Source code
-    │   ├── config/         # Configuration files
-    │   ├── controllers/    # Request handlers
-    │   ├── middleware/     # Custom middleware
-    │   ├── models/         # Data models
-    │   │   ├── mysql/      # MySQL models
-    │   │   └── mongo/      # MongoDB models
-    │   ├── routes/         # API routes
-    │   └── utils/          # Utility functions
-    └── dist/               # Compiled JavaScript
-```
+Why It’s Useful
+Saves Time – No more manual stock tracking or messy spreadsheets.
 
-## Getting Started
+Reduces Errors – Automatic calculations mean fewer mistakes.
 
-### Prerequisites
+Grows with You – Works for small cafes or busy shops.
 
-- Node.js (v14 or later)
-- MySQL (v8 or later)
-- MongoDB (v4 or later)
+Perfect for coffee shop owners who want a simple but powerful tool to handle daily operations.
 
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/coffeemaster.git
-   cd coffeemaster
-   ```
-
-2. Install server dependencies:
-   ```
-   cd server
-   npm install
-   ```
-
-3. Configure environment variables:
-   ```
-   cp .env.example .env
-   # Edit .env with your database credentials
-   ```
-
-4. Initialize the database:
-   ```
-   npm run build
-   npm start
-   ```
-
-5. Install client dependencies:
-   ```
-   cd ../client
-   npm install
-   ```
-
-6. Start the client:
-   ```
-   npm start
-   ```
-
-7. Access the application at `http://localhost:3000`
-
-## Default Credentials
-
-- Admin: username: `admin`, password: `admin123`
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
